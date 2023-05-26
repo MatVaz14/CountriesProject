@@ -1,0 +1,42 @@
+.container_menu {
+	position: absolute;
+	right: 35px;
+	top: 10px;
+	width: 200px;
+	border-radius: 15px 0 15px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	background: white;
+	background: rgba(213, 227, 255, 0.3);
+}
+
+.container_menu .containerMenu_option {
+	width: 100%;
+	transition: 0.5s;
+	padding-left: 10px;
+	height: 40px;
+	align-items: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+}
+.container_menu .animationOption:hover {
+	transition: 0.3s;
+	cursor: pointer;
+	background-color: rgba(213, 227, 255, 0.4);
+}
+.container_menu .animationOption2:hover {
+	transition: 0.3s;
+	cursor: pointer;
+	color: rgba(213, 227, 255, 0.6);
+		border-radius:0 0 15px 15px;
+	background-color: rgba(213, 227, 255, 0.4);
+}
+.styleLinkPortfolio {
+	transition: 0.5s;
+	color: white;
+	text-decoration: none;
+}

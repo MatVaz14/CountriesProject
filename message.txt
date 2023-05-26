@@ -1,0 +1,3 @@
+SET CLIENT_ENCODING TO 'utf8';
+
+Escribir en la consola de sql cuando no deje ver DB

@@ -1,0 +1,15 @@
+.container__cards {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: fit-content;
+	justify-content: center;
+	align-items: center;
+}
+.container__cards .container__paginated {
+	width: 100%;
+	display: flex;
+	margin-bottom: 10px;
+	justify-content: center;
+	align-items: center;
+}
