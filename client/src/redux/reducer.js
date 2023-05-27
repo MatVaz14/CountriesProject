@@ -1,4 +1,4 @@
-import { GET_COUNTRIES, GET_COUNTRIE, CONTINENT_FILTER_COUNTRIES, CONTINENT_FILTER_POPULATION,CURRENT_PAGE, CONTINENT_FILTER_ALPH } from "./action_type.js";
+import { GET_COUNTRIES, CONTINENT_FILTER_COUNTRIES, CONTINENT_FILTER_POPULATION,CURRENT_PAGE, CONTINENT_FILTER_ALPH } from "./action_type.js";
 
 const initialState = {
   currentPage: 1,
@@ -16,12 +16,11 @@ const rootReducer = (state = initialState, action) => {
       }; //Retornamos el estado nuevo
     case CONTINENT_FILTER_COUNTRIES:
       let data = [...state.countries];
-      let info = [...state.countriesOrigin]
        let filterCountriesContinent = [];
-      if(action.payload == 'continent'){
+      if(action.payload === 'continent'){
         filterCountriesContinent = [...state.countries]
       }else{
-        filterCountriesContinent = data.filter(countrie => (countrie.continent).toLowerCase() == (action.payload).toLowerCase());
+        filterCountriesContinent = data.filter(countrie => (countrie.continent).toLowerCase() === (action.payload).toLowerCase());
       }
       return {
         ...state,
@@ -39,10 +38,10 @@ const rootReducer = (state = initialState, action) => {
       // eslint-disable-next-line
       const order = orderCopy.sort((a, b) => {
         if (a.population > b.population) {
-          return "populationMin" == action.payload ? 1 : -1;
+          return "populationMin" === action.payload ? 1 : -1;
         }
         if (a.population < b.population) {
-          return "populationMax" == action.payload ? 1 : -1;
+          return "populationMax" === action.payload ? 1 : -1;
         }
       });
       return {
@@ -54,10 +53,10 @@ const rootReducer = (state = initialState, action) => {
       // eslint-disable-next-line
       const order2 = orderCopy2.sort((a, b) => {
         if (a.name > b.name) {
-          return "az" == action.payload ? 1 : -1;
+          return "az" === action.payload ? 1 : -1;
         }
         if (a.name < b.name) {
-          return "za" == action.payload ? 1 : -1;
+          return "za" === action.payload ? 1 : -1;
         }
       });
       return {

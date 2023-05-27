@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_COUNTRIES, GET_COUNTRIE, CONTINENT_FILTER_COUNTRIES, CONTINENT_FILTER_POPULATION, CURRENT_PAGE, CONTINENT_FILTER_ALPH } from "./action_type.js";
+import { GET_COUNTRIES, CONTINENT_FILTER_COUNTRIES, CONTINENT_FILTER_POPULATION, CURRENT_PAGE, CONTINENT_FILTER_ALPH } from "./action_type.js";
 
 export const getCountries = () => {
   return function (dispatch) {

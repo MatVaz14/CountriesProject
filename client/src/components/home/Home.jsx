@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Cards from "../cards/Cards.jsx";
 import Search from "../search/Search.jsx";

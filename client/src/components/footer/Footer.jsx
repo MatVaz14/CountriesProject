@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 
 import "./Footer.css";
 
-import React, { useEffect } from "react";
+import React from "react";
 
 AOS.init();
 

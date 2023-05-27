@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { TfiClose } from "react-icons/tfi";
 import styled from "styled-components";
+
+import "./Modal.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 AOS.init();
 
-const Modal = ({children, estado, nuevoEstado, tag, name, continent, population, capital, region, subregion, timezones, map, area}) => {
+const Modal = ({children, estado, nuevoEstado, tag, name, continent, population, capital, region, subregion, timezones, map, area, Activities}) => {
 	return (
 		<>
 		{estado &&
@@ -26,7 +28,7 @@ const Modal = ({children, estado, nuevoEstado, tag, name, continent, population,
 						</div>
 						<h2>Tag: {tag}</h2>
 						<h2>Capital: {capital}</h2>
-						<h4>Map: <a className="style-mapLink" href={map} target="_blank">Ver en Google Map</a></h4>
+						<h4>Map: <a className="style-mapLink" rel="noreferrer" href={map} target="_blank">Ver en Google Map</a></h4>
 					</div>
 					<div className="Contenido_Gap2">
 						<div className="subContainerContenidoGap2">
@@ -40,6 +42,26 @@ const Modal = ({children, estado, nuevoEstado, tag, name, continent, population,
 						<div className="container_timeZones">
 							<h3>Time-Zones: {timezones}</h3>
 						</div>
+						<hr />
+							<h2>Activididades Creadas: </h2>
+							<div className="containerActivities_created">
+							{
+								Activities.length == 0 
+								? 
+								<p>Aún no se han creado actividades para este Pais</p> 
+								:
+								(
+								Activities.map(actividad => (
+									<div>
+										<p>Nombre: {actividad.name}</p><br/>
+										<p>Duracion: {actividad.duration}</p><br/>
+										<p>Dificultad: {actividad.difficulty}</p><br/>
+										<p>Temporada: {actividad.season}</p><br/>
+									</div>
+								))
+								) 
+							}
+							</div>
 						</div>
 					</div>
 				</Contenido>
@@ -75,7 +97,7 @@ const Contenido = styled.div`
 		}
 
 		h4 {
-			font-size: 22px;
+			font-size: 20px;
 			margin-top: auto;
 			margin-bottom: 10px;
 		}

@@ -1,10 +1,9 @@
 import "./Card.css";
-import React, { useState, useEffect } from "react";
-import swal from 'sweetalert';
+import React, { useState } from "react";
 
 import Modal from "../modal/Modal.jsx";
 
-const Card = ({ tag, name, flag, continent, population, capital, region, subregion, timezones, map, area }) => {
+const Card = ({ tag, name, flag, continent, population, capital, region, subregion, timezones, map, area, Activities }) => {
 
   const [active, setActive] = useState(false);
 
@@ -28,6 +27,7 @@ const Card = ({ tag, name, flag, continent, population, capital, region, subregi
         timezones={timezones} 
         map={map} 
         area={area}
+        Activities={Activities}
         >
       <img className="style__flag" src={flag} alt="flag" width="100%" height="240px"/>
     </Modal>

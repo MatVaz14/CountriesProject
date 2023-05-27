@@ -3,16 +3,14 @@ import "./Filters.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getCountries, filterContinent,filterPopulation, filterAlph } from "../../redux/action";
+import { useDispatch } from "react-redux";
+import { filterContinent,filterPopulation, filterAlph } from "../../redux/action";
 
 AOS.init();
 
 const Filters = () => {
 	const dispatch = useDispatch();
-	const [input, setInput] = useState("");
-
+	
 	const handleClick = (e) => {
 		e.preventDefault();
 		const { name, value } = e.target;

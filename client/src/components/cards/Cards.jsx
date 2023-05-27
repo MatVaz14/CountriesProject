@@ -2,26 +2,23 @@ import "./Cards.css";
 import Card from "../card/Card.jsx"
 
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getCountries } from "../../redux/action";
+import { useSelector } from "react-redux";
 
 import Paginated from "../paginated/Paginated.jsx";
 
 const Cards = () => {
 
   let countries = useSelector((state) => state.countriesOrigin);
-    console.log(countries);
 
     //Datos necesarios para armar el paginado
     const [currentPage, setCurrentPage] = useState(1);
+
     const [countriesPerPage, setCountriesPerPage] = useState(10);
 
     const indexLastCountry = currentPage * countriesPerPage;
     const indexFirstCountry = indexLastCountry - countriesPerPage;
     const currentCountries = countries.slice(indexFirstCountry, indexLastCountry);
-
-    const [order, setOrder] = useState('');
-
+    console.log(countries)
     const paginado = (pageNumber) => {
         setCurrentPage(pageNumber)
     }
@@ -48,6 +45,7 @@ const Cards = () => {
             timezones={countrie.timezones}
             map={countrie.maps}
             area={countrie.area}
+            Activities={countrie.Activities}
           />
         ))}
 		</div>

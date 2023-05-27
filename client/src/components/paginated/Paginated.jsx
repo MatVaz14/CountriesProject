@@ -30,7 +30,7 @@ const [currentPosition, setCurrentPosition] = useState(currentPages)
             <div>
                 {
                     pageNumbers?.map((number) => (
-                        <button value={number} onClick={() => (paginado(number), handleClickPage(number))} className={`${number == currentPosition ? "currentActivate" : ""} bg-btnPaginated`}>
+                        <button value={number} onClick={() => (paginado(number), handleClickPage(number))} className={`${number === currentPosition ? "currentActivate" : ""} bg-btnPaginated`}>
                             {number}
                         </button>
                     ))

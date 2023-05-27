@@ -1,7 +1,7 @@
 import "./Search.css";
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getCountrie, getCountries,currentPage } from "../../redux/action";
+import { useDispatch } from "react-redux";
+import { getCountrie,currentPage } from "../../redux/action";
 
 const Search = () => {
 	const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const Search = () => {
 	
 	return (
 		<div className="container__search">
-		<input type="text" name="search" id="" placeholder="Buscar..." onChange={handleChange}/>
+		<input type="text" name="search" id="" autoComplete="off" placeholder="Buscar..." onChange={handleChange}/>
 		</div>
 	)
 }
