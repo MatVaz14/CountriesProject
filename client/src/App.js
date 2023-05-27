@@ -6,6 +6,7 @@ import Landing from "./components/landing/Landing.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Form from "./components/form/Form.jsx";
 
+// axios.defaults.baseURL = nueva_direccionDeploy
 axios.defaults.baseURL = "http://localhost:3002";
 
 function App() {
