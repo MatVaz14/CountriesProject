@@ -1,0 +1,68 @@
+.bg-sectionCreated {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+.bg-containerCreated {
+	height: 100%;
+}
+.bg-containerLink {
+	height: 10%;
+}
+.containerDetails-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 90%;
+}
+
+.bg-sectionCreated .container-bgActivities {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+.bg-sectionCreated .container-bgActivities .bg-container-activity {
+	width: 250px;
+	height: 200px;
+	border-radius: 10px;
+	background-color: white;
+	font-size: 18px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 10px;
+	cursor: default;
+box-shadow: 2px 14px 49px -4px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 14px 49px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 14px 49px -4px rgba(0,0,0,0.75);
+}
+
+.sty-link {
+	transition: .4s;
+	color: white;
+	font-size: 28px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 5%;
+	padding-top: 20px;
+}
+.sty-link:hover {
+	transition: .3s;
+	transform: scale(1.2);
+}
+.bg-sectionCreated img {
+	position: fixed;
+	width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+	z-index: -100;
+	height: 100vh;
+}

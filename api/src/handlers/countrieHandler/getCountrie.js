@@ -20,6 +20,18 @@ const getCountries = async (req, res) => {
   }
 };
 
+const getCountrieDetail = async (req,res) => {
+  const {tag} = req.params;
+  try {
+    const data = await infoDb();
+    const info = data.filter(d => d.tag.toLowerCase().includes(tag.toLowerCase()));
+    res.status(200).send(info);
+  }catch(error){
+    res.status(400).json({ error: message.error });
+  }
+}
+
 module.exports = {
   getCountries,
+  getCountrieDetail
 };

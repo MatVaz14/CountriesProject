@@ -1,10 +1,14 @@
 .containerActivities_created {
 	overflow: hidden;
 	height: ;
-	border: 2px solid white;
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
 	border-radius: 15px;
 	overflow-y: scroll;
+}
+.st-link {
+	color: white;
+	font-size: 18px;
+	margin-top: 5px;
 }

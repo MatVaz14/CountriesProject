@@ -1,8 +1,12 @@
 import React from 'react';
 import { TfiClose } from "react-icons/tfi";
 import styled from "styled-components";
+import Created from "../created/Created.jsx";
+
+import { Link } from "react-router-dom";
 
 import "./Modal.css";
+
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -48,17 +52,15 @@ const Modal = ({children, estado, nuevoEstado, tag, name, continent, population,
 							{
 								Activities.length == 0 
 								? 
-								<p>Aún no se han creado actividades para este Pais</p> 
+								(<p>Aún no se han creado actividades para este Pais <br /> <Link to="/createActivity" className="st-link">
+									Crea Una!
+								</Link></p> 
+								)
 								:
 								(
-								Activities.map(actividad => (
-									<div>
-										<p>Nombre: {actividad.name}</p><br/>
-										<p>Duracion: {actividad.duration}</p><br/>
-										<p>Dificultad: {actividad.difficulty}</p><br/>
-										<p>Temporada: {actividad.season}</p><br/>
-									</div>
-								))
+								<>
+								<Link to={`/created/${tag}`}  className="st-link">Ver actividades creadas</Link>
+								</>
 								) 
 							}
 							</div>
