@@ -57,9 +57,9 @@ const Form = () => {
   const handleSeason = (event) => {
     if (event.target.checked) {
       let data = event.target.value;
-      let exist = season?.find((element) => element === data);
-      if (exist) return;
-      setSeason(...season, event.target.value);
+      let exist = season?.includes((element) => element === data);
+      exist ? setSeason(...season) : setSeason(...season, event.target.value);
+      
     }
     if (!event.target.checked) {
       let deleteSeason = countriesId.filter(
@@ -191,7 +191,7 @@ const Form = () => {
                   onChange={(event) => handleInputChange(event)}
                   name="durationMin"
                   type="number"
-                  min="1"
+                  min="0"
                   max="59"
                   className="style_durationInput"
                   required
